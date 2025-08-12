@@ -1,18 +1,58 @@
-<h3>Sobre la ESPE</h3>
+<style>
+  /* Contenedor para los ítems con rectángulo vertical */
+  .objetivo-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .objetivo-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .objetivo-rect {
+    width: 6px;
+    height: 2rem;
+    background-color: #00713d; /* color azul MDL */
+    margin-right: 1rem;
+    border-radius: 2px;
+  }
+
+  /* Contenedor con sombra para misión y visión */
+  .resaltado {
+    background-color: #f9f9f9;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+  }
+</style>
+
+<h4>Sobre la ESPE</h4>
+<hr>
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
   <div class="mdl-tabs__tab-bar">
-    <a href="#historia-panel" class="mdl-tabs__tab is-active">Historia</a>
+    <a href="#objetivos-panel" class="mdl-tabs__tab is-active">Objetivos</a>
     <a href="#mision-panel" class="mdl-tabs__tab">Misión</a>
     <a href="#vision-panel" class="mdl-tabs__tab">Visión</a>
   </div>
 
-  <div class="mdl-tabs__panel is-active" id="historia-panel">
-    <p>La Universidad de las Fuerzas Armadas ESPE fue fundada en...</p>
+  <div class="mdl-tabs__panel is-active" id="objetivos-panel">
+    <ul class="objetivo-list">
+      <li><div class="objetivo-rect"></div>Formar profesionales íntegros y humanistas al servicio de la sociedad ecuatoriana, para impulsar el desarrollo técnico, económico y cultural del país mediante la práctica de la ciencia y la investigación.</li>
+      <li><div class="objetivo-rect"></div>Realizar trabajos de investigación o servicios en las ciencias e ingenierías como principio fundamental de una educación científica.</li>
+      <li><div class="objetivo-rect"></div>Actualizar y profundizar el conocimiento de las ciencias e ingenierías tanto en su connotación tecnológica como socio-económica.</li>
+    </ul>
   </div>
+
   <div class="mdl-tabs__panel" id="mision-panel">
-    <p>Formar profesionales líderes con valores éticos...</p>
+    <div class="resaltado">
+      <p>La Universidad de las Fuerzas Armadas-ESPE forma personas en el campo científico y tecnológico bajo un marco de principios y valores; y, genera conocimiento transferible para contribuir al progreso del país y Fuerzas Armadas, a través de la docencia, investigación y vinculación con la sociedad.</p>
+    </div>
   </div>
+
   <div class="mdl-tabs__panel" id="vision-panel">
-    <p>Ser una universidad reconocida a nivel nacional e internacional...</p>
+    <div class="resaltado">
+      <p>Al 2025, ser reconocidos a nivel nacional e internacional como una institución de educación superior de calidad en docencia, investigación y vinculación bajo el paradigma de una universidad inteligente, articulando la transferencia de ciencia y tecnología, a través de procesos de I+D+i; y, convirtiéndonos en un referente de pensamiento en seguridad y defensa, al servicio del país y Fuerzas Armadas.</p>
+    </div>
   </div>
 </div>
