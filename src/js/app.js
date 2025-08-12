@@ -45,14 +45,17 @@ window.addEventListener("load", async () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const contentDiv = document.getElementById("content");
-
-  // Función para cargar páginas
+  const basePath = location.hostname === "localhost" ? "" : "/ESPE_PWA_Portal";
+  
   function loadPage(page) {
-    fetch(`src/pages/${page}`)
-      .then(res => res.text())
+    fetch(`${basePath}/src/pages/${page}`)
+      .then(res => {
+        if (!res.ok) throw new Error(`No se pudo cargar: ${page}`);
+        return res.text();
+      })
       .then(html => {
         contentDiv.innerHTML = html;
-        componentHandler.upgradeAllRegistered(); // Recargar estilos MDL
+        componentHandler.upgradeAllRegistered();
       })
       .catch(err => {
         contentDiv.innerHTML = `<p>Error al cargar la página.</p>`;
