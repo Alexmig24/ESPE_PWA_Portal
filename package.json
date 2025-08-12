@@ -1,0 +1,31 @@
+{
+  "name": "espe_pwa_portal",
+  "version": "1.0.0",
+  "description": "Examen práctico final, donde se desarrolla un Progressive Web App (PWA) informativa sobre la Universidad de las Fuerzas Armadas - ESPE.",
+  "main": "index.js",
+  "scripts": {
+    "serve": "http-server -c-1 .",
+    "dev": "live-server",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexmig24/ESPE_PWA_Portal.git"
+  },
+  "keywords": [],
+  "author": "Alexander Quizhpe",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.8",
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "prettier": "^3.6.2"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Alexmig24/ESPE_PWA_Portal/issues"
+  },
+  "homepage": "https://github.com/Alexmig24/ESPE_PWA_Portal#readme"
+}
