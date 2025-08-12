@@ -1,0 +1,29 @@
+{
+  "lang": "es",
+  "name": "ESPE PWA: Portal Informativo",
+  "short_name": "ESPE PWA",
+  "description": "Aplicacion que permite tomar notas de manera sencilla",
+  "background_color": "#1a4d80",
+  "theme_color": "#1a4d80",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url":"/ESPE_PWA_Portal/",
+  "scope": "/ESPE_PWA_Portal/",
+  "icons": [
+    {
+      "src": "src/assets/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "src/assets/icons/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "src/assets/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
