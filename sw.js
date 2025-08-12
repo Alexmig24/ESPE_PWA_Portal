@@ -8,8 +8,11 @@ const CACHE_FILES = [
   `${BASE_PATH}/manifest.webmanifest.json`,
   `${BASE_PATH}/src/css/app.css`,
   `${BASE_PATH}/src/js/app.js`,
-  `${BASE_PATH}/src/js/notes.js`,
-  `${BASE_PATH}/src/js/ui.js`,
+  `${BASE_PATH}/src/pages/about.html`,
+  `${BASE_PATH}/src/pages/admision.html`,
+  `${BASE_PATH}/src/pages/contacto.html`,
+  `${BASE_PATH}/src/pages/inicio.html`,
+  `${BASE_PATH}/src/pages/oferta.html`,
   `${BASE_PATH}/sw.js`,
   // Material Design Lite CDN
   'https://fonts.googleapis.com/icon?family=Material+Icons',
@@ -147,7 +150,7 @@ self.addEventListener('push', (event) => {
   console.log('Service Worker: Push notification recibida');
   
   let options = {
-    body: 'Nueva notificación de Quick Jot',
+    body: 'Nueva notificación de ESPE: Portal Informativo',
     icon: `${BASE_PATH}/src/assets/icons/icon-128x128.png`,
     badge: `${BASE_PATH}/src/assets/icons/icon-128x128.png`,
     vibrate: [100, 50, 100],
@@ -172,11 +175,11 @@ self.addEventListener('push', (event) => {
   if (event.data) {
     const data = event.data.json();
     options.body = data.body || options.body;
-    options.title = data.title || 'Quick Jot';
+    options.title = data.title || 'ESPE: Portal Informativo';
   }
   
   event.waitUntil(
-    self.registration.showNotification('Quick Jot', options)
+    self.registration.showNotification('ESPE: Portal Informativo', options)
   );
 });
 
