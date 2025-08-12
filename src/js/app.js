@@ -42,3 +42,33 @@ window.addEventListener("load", async () => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const contentDiv = document.getElementById("content");
+
+  // Función para cargar páginas
+  function loadPage(page) {
+    fetch(`src/pages/${page}`)
+      .then(res => res.text())
+      .then(html => {
+        contentDiv.innerHTML = html;
+        componentHandler.upgradeAllRegistered(); // Recargar estilos MDL
+      })
+      .catch(err => {
+        contentDiv.innerHTML = `<p>Error al cargar la página.</p>`;
+        console.error(err);
+      });
+  }
+
+  // Enlaces del menú
+  document.querySelectorAll(".mdl-navigation__link").forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const page = link.getAttribute("data-page");
+      loadPage(page);
+    });
+  });
+
+  // Cargar inicio por defecto
+  loadPage("inicio.html");
+});
